@@ -1,5 +1,6 @@
 import * as RE from 'rogue-engine';
 import { Object3D, PerspectiveCamera, Vector3 } from 'three';
+import { TerrainClass } from "./TerrainClass.js";
 
 const fwdDirection = new Vector3(0, 0, -1);
 const bwdDirection = new Vector3(0, 0, 1);
@@ -20,6 +21,9 @@ export default class FPSControllerJS extends RE.Component {
     this.jumpSpeed = 50;
     this.camera;
     this.cameraPos;
+    // set in initTerrain , MainHandlerComponent
+    this.TerrainInfo = null;
+
   }
 
   awake() {
