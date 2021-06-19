@@ -56,7 +56,6 @@ export declare class App {
             [uuid: string]: string;
         };
     }): void;
-    private static cleanupScene;
     static loadScene(name: string | number): Promise<void>;
     private static loadSceneFunc;
     static clone(object: Object3D, parent?: Object3D): Object3D;

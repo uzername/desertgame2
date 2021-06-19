@@ -17,8 +17,8 @@ app.use(express.static(`${__dirname}/dist`));
 
 app.use('/', router);
 
-router.use(express.json({limit: '50mb'}));
-router.use(express.urlencoded({limit: '50mb', extended: false }));
+router.use(express.json({limit: '10000mb'}));
+router.use(express.urlencoded({limit: '10000mb', extended: false }));
 
 router.post('/setScenePlayerConfig', (req, res, next) => {
   config = req.body;

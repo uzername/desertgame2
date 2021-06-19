@@ -1,7 +1,7 @@
 import * as RE from 'rogue-engine';
 import * as THREE from 'three'
 // https://stackoverflow.com/questions/12812757/how-to-instantiate-a-javascript-class-in-another-js-file
-import { TerrainClass } from "./TerrainClass.js";
+import TerrainClass from "./TerrainClass.js";
 //=================================================================
 // terrain generation
 function Terrain(detail) {

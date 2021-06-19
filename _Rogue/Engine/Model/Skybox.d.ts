@@ -1,10 +1,11 @@
-import { Texture } from "three";
+import { Scene, PerspectiveCamera, Texture } from "three";
 declare class SkyboxClass {
     private _enabled;
     private _mode;
     private _scene;
     private _camera;
     private _sky;
+    private _cubemapSky;
     private _directionalLight;
     private _showSun;
     private _inclination;
@@ -22,6 +23,8 @@ declare class SkyboxClass {
     private _cubemapLeft;
     private _cubeTexture;
     sunSpeed: number;
+    get scene(): Scene;
+    get camera(): PerspectiveCamera;
     get enabled(): boolean;
     set enabled(value: boolean);
     get mode(): 'procedural' | 'cubemap' | '360';
@@ -69,6 +72,7 @@ declare class SkyboxClass {
 }
 export declare let Skybox: SkyboxClass;
 export declare type SkyboxSerialization = {
+    _enabled: boolean;
     _mode: 'procedural' | 'cubemap' | '360';
     _showSun?: boolean;
     inclination?: number;

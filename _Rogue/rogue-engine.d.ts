@@ -14,5 +14,5 @@ export { default as SceneController } from './Engine/Model/SceneController';
 export { Runtime, RuntimeController } from './Engine/Controller/RuntimeController';
 export { Debug, Log, Error, Warning } from './Engine/Controller/Debug';
 export { onObjectAdded, onComponentAdded, onComponentLoaded, onComponentRemoved, onObjectRemoved, onBeforeUpdate, onUpdate, onAfterUpdate, onNextFrame, } from './Engine/Controller/Events';
-export { isDev, getStaticPath } from './Engine/Controller/Functions';
+export { isDev, getStaticPath, dispose } from './Engine/Controller/Functions';
 export { Prop } from './Engine/Controller/Decorators';
