@@ -157,6 +157,7 @@ export default class MainHandlerComponent extends RE.Component {
     var objectStartLocation = RE.App.currentScene.getObjectByName("StartingLocation");
     objectStartLocation.translateY(terrain.get(Math.round(terrain.size/2),Math.round(terrain.size/2))*heightMultiplier);
     var objectCameraPositionObj= RE.App.currentScene.getObjectByName("Main Camera");
+    console.log(objectCameraPositionObj);
     objectCameraPositionObj.translateY(terrain.get(Math.round (terrain.size/2),Math.round(terrain.size/2))*heightMultiplier);
     
     //prepare terrain class
@@ -164,9 +165,10 @@ export default class MainHandlerComponent extends RE.Component {
     var myTerrainHandler = new TerrainClass();
     myTerrainHandler.terrain = terrain;
     myTerrainHandler.cellSize = cellSize;
-    var componentFPSController = getComponentByName("FPSController", objectCameraPositionObj);
+    var componentFPSController = RE.getComponentByName("FPSControllerJS", objectCameraPositionObj);
+    console.log(componentFPSController);
     if (componentFPSController !== null) {
-      controllerFPSController.TerrainInfo = myTerrainHandler;
+      componentFPSController.TerrainInfo = myTerrainHandler;
     }
     //add 3d terrain to scene
     RE.App.currentScene.add(object);
@@ -174,7 +176,7 @@ export default class MainHandlerComponent extends RE.Component {
 
   awake() {
       console.log("INIT TERRAIN");
-      //this.initTerrain();
+      this.initTerrain();
   }
 
   start() {

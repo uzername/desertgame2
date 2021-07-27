@@ -67,7 +67,6 @@ export default class FPSControllerJS extends RE.Component {
     if (RE.Input.mouse.isMoving && document.pointerLockElement) {
       const mouseDeltaX = RE.Input.mouse.movementX * this.rotSpeed * deltaTime;
       const mouseDeltaY = RE.Input.mouse.movementY * this.rotSpeed * deltaTime;
-
       this.camera.rotation.set(
         this.camera.rotation.x - mouseDeltaY,
         this.camera.rotation.y - mouseDeltaX,
@@ -127,7 +126,7 @@ export default class FPSControllerJS extends RE.Component {
     }
 
     this.object3d.position.add(movementVector);
-
+    
     this.camera.position.set(
       this.object3d.position.x,
       this.object3d.position.y + 1,
