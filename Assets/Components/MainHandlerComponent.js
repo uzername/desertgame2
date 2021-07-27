@@ -174,7 +174,7 @@ export default class MainHandlerComponent extends RE.Component {
 
   awake() {
       console.log("INIT TERRAIN");
-      this.initTerrain();
+      //this.initTerrain();
   }
 
   start() {

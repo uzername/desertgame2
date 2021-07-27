@@ -58,6 +58,7 @@ export default class FPSControllerJS extends RE.Component {
 
     this.camera.rotation.order = 'YXZ';
     this.object3d.rotation.order = 'YXZ';
+    console.log('FPSController.Awake done');
   }
 
   update() {
